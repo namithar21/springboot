@@ -1,4 +1,4 @@
-FROM lolhens/baseimage-openjre
-ADD target/springbootApp.jar springbootApp.jar
-EXPOSE 80
-ENTRYPOINT ["java", "-jar", "springbootApp.jar"]
+FROM java:8
+EXPOSE 8080
+ADD /target/springbootsrv.jar springbootsrv.jar
+ENTRYPOINT ["java", "-jar", "springbootsrv.jar"]
